@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+}
+
+.container {
+  width: 30%;
+  margin: 40px auto;
+}
+
+.calculator {
+  width: 200px;
+  height: 300px;
+  background-color: #28374f;
+  margin: 40px auto;
+}
+
+.display {
+  width: 160px;
+  margin: 20px auto;
+  height: 40px;
+  background-color: black;
+  color: #0ccc22;
+}
+
+.keypad {
+  width: 160px;
+  width: 160px;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid #808080;  
+  width: 25%;
+  height: 25%;
+  background-color: white;
+  color: #212121;
+  font-size: 14px
+}

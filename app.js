@@ -29,8 +29,6 @@ $(document).ready(function() {
   });
 
   function evaluate(expression) {
-    var argument = 0;
-    var operator = 0;
     var args = [];
     var ops = [];
     var components = expression.split(" ");

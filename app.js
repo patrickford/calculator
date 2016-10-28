@@ -28,9 +28,6 @@ $(document).ready(function() {
     } 
   });
 
- //  "577 + 6"  ===> 577 + 6'
- // + - / 88
-
   function evaluate(expression) {
     var argument = 0;
     var operator = 0;
@@ -45,9 +42,6 @@ $(document).ready(function() {
         args.push(parseInt(components[i]));
       }
     }
-      // regext in number contatinate into argument and store in arguments array
-      // if operator save in operands array
-      // at end, contruct statement, convert arguments to number types and evalate
 
     if (ops[0] == "+") {
       var result = args[0] + args[1];

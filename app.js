@@ -9,10 +9,8 @@ $(document).ready(function() {
   }
 
   $('.button').click(function() {
-
     var entry = $(this).text();
-    console.log(entry);
-    console.log(typeof entry);
+
     if (entry === "AC") {
       clear();
     }
@@ -25,24 +23,49 @@ $(document).ready(function() {
         expression += entry;        
       } else {
         $('.display').append(" " + entry + " ");
-        expression += entry;  
+        expression += " " + entry + " ";  
       } 
     } 
   });
+
+ //  "577 + 6"  ===> 577 + 6'
+ // + - / 88
 
   function evaluate(expression) {
     var argument = 0;
     var operator = 0;
     var args = [];
     var ops = [];
-    for (var i=0; i<expression.length; i++) {
-      if (Number(expression[i]) instanceof Number) {
+    var components = expression.split(" ");
 
+    for (var i=0; i<components.length; i++) {
+      if (isNaN(parseInt(components[i]))) {
+        ops.push(components[i]);
+      } else {
+        args.push(parseInt(components[i]));
       }
+    }
       // regext in number contatinate into argument and store in arguments array
       // if operator save in operands array
       // at end, contruct statement, convert arguments to number types and evalate
-    }
+
+    if (ops[0] == "+") {
+      var result = args[0] + args[1];
+      $(".display").text(result);
+    } 
+    else if (ops[0] == "-") {
+      var result = args[0] - args[1];
+      $(".display").text(result);
+    } 
+    else if (ops[0] == "*") {
+      var result = args[0] * args[1];
+      $(".display").text(result);
+    } 
+    else if (ops[0] == "/") {
+      var result = args[0] / args[1];
+      $(".display").text(result);
+    }  
+    expression = "";   
   }
 
 });
